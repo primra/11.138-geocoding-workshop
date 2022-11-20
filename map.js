@@ -260,15 +260,15 @@ map.on("click", (e) => {
         // add a new jotform submission
         const submission = new Object();
         // name
-        submission[3] = newPoint.properties.name;
+        submission[4] = newPoint.properties.name;
         // email
-        submission[4] = newPoint.properties.email;
+        submission[5] = newPoint.properties.email;
         // place name
-        submission[5] = newPoint.properties.placeName;
+        submission[6] = newPoint.properties.placeName;
         // latitude
-        submission[6] = newPoint.geometry.coordinates[1];
+        submission[7] = newPoint.geometry.coordinates[1];
         // longitude
-        submission[7] = newPoint.geometry.coordinates[0];
+        submission[8] = newPoint.geometry.coordinates[0];
         // description
         submission[9] = newPoint.properties.description;
        
@@ -281,7 +281,7 @@ map.on("click", (e) => {
           // submit the data to jotform and remove the popup
           popup.remove();
           JF.createFormSubmission(
-            "223144210321032",
+            "223216816794058",
             submission,
             function (response) {
               console.log("submission response", response);
